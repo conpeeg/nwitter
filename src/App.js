@@ -1,9 +1,8 @@
+import AppRouter from './components/Router';
 
 function App() {
   return (
-    <div className="App">
-      re-start
-    </div>
+    <AppRouter />
   );
 }
 
