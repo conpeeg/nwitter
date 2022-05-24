@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Route,    
     Switch,
-    Redirect,
+    
 } from "react-router-dom";
 import Auth from 'routes/Auth';
 import Home from 'routes/Home';
@@ -32,7 +32,7 @@ const AppRouter = ({isLoggedIn}) => {
                     </Route>
                     </>
                 )}
-                <Redirect from="*" to="/" />
+                
             </Switch>
         </Router>
     )
