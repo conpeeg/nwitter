@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if (user) {
-        setIsLoggedIn(user);
+        setIsLoggedIn(true);
       } else {
         setIsLoggedIn(false);
       }
@@ -18,7 +18,11 @@ function App() {
 
   return (
     <>
-      {init ?       <AppRouter isLoggedIn={isLoggedIn} /> : "initializing..."}
+      {init ? (
+      <AppRouter isLoggedIn={isLoggedIn} />
+      ) : (
+        "initializing..."
+      )}
       <footer> &copy; {new Date().getFullYear()} Nwitter Conpeeg </footer>
     </>    
   );
